@@ -36,7 +36,6 @@ public class frm_DangNhap extends javax.swing.JFrame {
         txtTK = new javax.swing.JTextField();
         txtMK = new javax.swing.JPasswordField();
         btnDangNhap = new javax.swing.JButton();
-        lblThongTIn = new javax.swing.JLabel();
         lblTK = new javax.swing.JLabel();
         lblMK = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
@@ -100,15 +99,6 @@ public class frm_DangNhap extends javax.swing.JFrame {
             }
         });
 
-        lblThongTIn.setForeground(new java.awt.Color(0, 153, 153));
-        lblThongTIn.setText("Thông tin sản phẩm!");
-        lblThongTIn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblThongTIn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblThongTInMouseClicked(evt);
-            }
-        });
-
         lblTK.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblTK.setText("Tài khoản");
 
@@ -148,9 +138,6 @@ public class frm_DangNhap extends javax.swing.JFrame {
                             .addComponent(lblTK)
                             .addComponent(lblMK))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl0Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblThongTIn))
             .addGroup(pnl0Layout.createSequentialGroup()
                 .addComponent(pnlTieuDe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -182,8 +169,7 @@ public class frm_DangNhap extends javax.swing.JFrame {
                             .addComponent(txtMK, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(btnDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblThongTIn))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,10 +204,6 @@ public class frm_DangNhap extends javax.swing.JFrame {
         //        frm.setVisible(true);
      
     }//GEN-LAST:event_btnDangNhapActionPerformed
-
-    private void lblThongTInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblThongTInMouseClicked
-        
-    }//GEN-LAST:event_lblThongTInMouseClicked
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         System.exit(0);
@@ -272,7 +254,6 @@ public class frm_DangNhap extends javax.swing.JFrame {
     private javax.swing.JLabel lblIcon2;
     private javax.swing.JLabel lblMK;
     private javax.swing.JLabel lblTK;
-    private javax.swing.JLabel lblThongTIn;
     private javax.swing.JPanel pnl0;
     private javax.swing.JPanel pnlTieuDe;
     private javax.swing.JPasswordField txtMK;
