@@ -5,19 +5,7 @@
  */
 package GUI;
 
-import DTO.DTO_ThuePhong;
-import com.sun.org.apache.bcel.internal.generic.AALOAD;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Time;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -25,17 +13,13 @@ import javax.swing.JOptionPane;
  */
 public class frm_ThuePhong extends javax.swing.JFrame {
 
-    Date d = new Date();
-    /**
-     * Creates new form frm_ThuePhong
-     */
+    
     public static frm_ThuePhong form;
 
     public frm_ThuePhong() {
        
 //System.out.println(java.time.LocalTime.now());
     }
-    public static String MaPhong, GiaTheoGio, GiaTheoNgay;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,7 +48,7 @@ public class frm_ThuePhong extends javax.swing.JFrame {
         lbl_NgayRaDuKien = new javax.swing.JLabel();
         rab_Ngay = new javax.swing.JRadioButton();
         rab_Gio = new javax.swing.JRadioButton();
-        txt_NgayRa = new com.toedter.calendar.JDateChooser();
+        txt_NgayRa = new org.netbeans.modules.form.InvalidComponent();
         btn_Tru = new javax.swing.JButton();
         btn_Cong = new javax.swing.JButton();
         lbl_TienCoc = new javax.swing.JLabel();
@@ -90,6 +74,11 @@ public class frm_ThuePhong extends javax.swing.JFrame {
         lbl_TenKH.setBounds(54, 153, 99, 17);
 
         cbb_KhachHang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cbb_KhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_KhachHangActionPerformed(evt);
+            }
+        });
         getContentPane().add(cbb_KhachHang);
         cbb_KhachHang.setBounds(163, 143, 267, 40);
 
@@ -192,7 +181,7 @@ public class frm_ThuePhong extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rab_Ngay);
-        rab_Ngay.setBounds(272, 297, 127, 25);
+        rab_Ngay.setBounds(272, 297, 123, 25);
 
         buttonGroup1.add(rab_Gio);
         rab_Gio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -203,11 +192,8 @@ public class frm_ThuePhong extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rab_Gio);
-        rab_Gio.setBounds(272, 242, 113, 25);
+        rab_Gio.setBounds(272, 242, 111, 25);
 
-        txt_NgayRa.setDateFormatString("dd-MM-yyyy HH:mm:ss");
-        txt_NgayRa.setFocusable(false);
-        txt_NgayRa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         getContentPane().add(txt_NgayRa);
         txt_NgayRa.setBounds(163, 378, 267, 30);
 
@@ -248,7 +234,7 @@ public class frm_ThuePhong extends javax.swing.JFrame {
 
         lbl_vnd.setText("(VNĐ)");
         getContentPane().add(lbl_vnd);
-        lbl_vnd.setBounds(430, 470, 35, 16);
+        lbl_vnd.setBounds(430, 470, 29, 14);
 
         btn_Thue.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btn_Thue.setText("Thuê");
@@ -283,9 +269,7 @@ public class frm_ThuePhong extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    public void loadData_KH() {
-       
-    }
+
     private void btn_ThemKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThemKHActionPerformed
        
 
@@ -300,9 +284,9 @@ public class frm_ThuePhong extends javax.swing.JFrame {
        
 
     }//GEN-LAST:event_btn_ThueActionPerformed
-    String NgayRaDuKien = "";
+
     private void rab_GioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rab_GioActionPerformed
-        txt_NgayRa.setDateFormatString("dd-MM-yyyy HH:mm:ss");
+       
     }//GEN-LAST:event_rab_GioActionPerformed
 
     private void rab_NgayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rab_NgayActionPerformed
@@ -338,46 +322,16 @@ public class frm_ThuePhong extends javax.swing.JFrame {
     private void txt_SoNguoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_SoNguoiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_SoNguoiActionPerformed
+
+    private void cbb_KhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbb_KhachHangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbb_KhachHangActionPerformed
     private void SoNGuoi(int giatri) {
-        int sl = Integer.parseInt(txt_SoNguoi.getText());
-        sl = sl + (giatri);
-        txt_SoNguoi.setText(String.valueOf(sl));
+       
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frm_ThuePhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frm_ThuePhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frm_ThuePhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frm_ThuePhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frm_ThuePhong().setVisible(true);
-            }
-        });
+       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -405,7 +359,7 @@ public class frm_ThuePhong extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_vnd;
     private javax.swing.JRadioButton rab_Gio;
     private javax.swing.JRadioButton rab_Ngay;
-    private com.toedter.calendar.JDateChooser txt_NgayRa;
+    private org.netbeans.modules.form.InvalidComponent txt_NgayRa;
     private javax.swing.JTextField txt_NgayThue;
     private javax.swing.JTextField txt_SoNguoi;
     private javax.swing.JTextField txt_TienCoc;
