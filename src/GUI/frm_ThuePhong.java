@@ -114,6 +114,11 @@ public class frm_ThuePhong extends javax.swing.JFrame {
 
         txt_NgayThue.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt_NgayThue.setFocusable(false);
+        txt_NgayThue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_NgayThueActionPerformed(evt);
+            }
+        });
         getContentPane().add(txt_NgayThue);
         txt_NgayThue.setBounds(163, 340, 267, 30);
 
@@ -270,7 +275,7 @@ public class frm_ThuePhong extends javax.swing.JFrame {
 
         lbl_Nen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HinhAnh/1.jpg"))); // NOI18N
         getContentPane().add(lbl_Nen);
-        lbl_Nen.setBounds(0, 0, 570, 720);
+        lbl_Nen.setBounds(0, 0, 590, 720);
 
         pack();
         setLocationRelativeTo(null);
@@ -335,6 +340,10 @@ public class frm_ThuePhong extends javax.swing.JFrame {
     private void cbb_KhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbb_KhachHangActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbb_KhachHangActionPerformed
+
+    private void txt_NgayThueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_NgayThueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_NgayThueActionPerformed
     private void SoNGuoi(int giatri) {
        
     }
