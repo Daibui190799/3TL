@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import static GUI.frm_QuanLyChinh.b;
+
 /**
  *
  * @author ADMIN
@@ -14,10 +16,11 @@ public class frm_ThuePhong extends javax.swing.JFrame {
     /**
      * Creates new form frm_ThuePhong
      */
-
+    public static frm_ThuePhong b;
     public frm_ThuePhong() {
         
-//System.out.println(java.time.LocalTime.now());
+        initComponents();
+        b = this;
     }
     public static String MaPhong, GiaTheoGio, GiaTheoNgay;
 
@@ -74,6 +77,11 @@ public class frm_ThuePhong extends javax.swing.JFrame {
         lbl_TenKH.setBounds(54, 153, 99, 17);
 
         cbb_KhachHang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cbb_KhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbb_KhachHangActionPerformed(evt);
+            }
+        });
         getContentPane().add(cbb_KhachHang);
         cbb_KhachHang.setBounds(163, 143, 270, 40);
 
@@ -323,6 +331,10 @@ public class frm_ThuePhong extends javax.swing.JFrame {
     private void txt_SoNguoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_SoNguoiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_SoNguoiActionPerformed
+
+    private void cbb_KhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbb_KhachHangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbb_KhachHangActionPerformed
     private void SoNGuoi(int giatri) {
        
     }
@@ -332,7 +344,11 @@ public class frm_ThuePhong extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-      
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new frm_ThuePhong().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

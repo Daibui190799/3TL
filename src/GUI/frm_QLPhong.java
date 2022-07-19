@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import static GUI.frm_QuanLyChinh.b;
+
 /**
  *
  * @author ADMIN
@@ -12,10 +14,11 @@ package GUI;
 public class frm_QLPhong extends javax.swing.JFrame {
 
     
-    public static frm_QLPhong form;
+    public static frm_QLPhong b;
 
     public frm_QLPhong() {
-       
+       initComponents();
+        b = this;
     }
 
 
@@ -509,7 +512,11 @@ public class frm_QLPhong extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new frm_QLPhong().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
